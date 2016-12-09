@@ -652,7 +652,7 @@ installDocumentReadyPageEventTriggers = ->
 installJqueryAjaxSuccessPageUpdateTrigger = ->
   if typeof jQuery isnt 'undefined'
     jQuery(document).on 'ajaxSuccess', (event, xhr, settings) ->
-      return unless jQuery.trim xhr.responseText
+      return unless jQuery.trim xhr?.responseText
       triggerEvent EVENTS.UPDATE
 
 onHistoryChange = (event) ->
